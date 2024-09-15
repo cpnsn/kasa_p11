@@ -1,26 +1,21 @@
-import "./App.css";
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import "./sass/App.scss";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path: "test",
-    element: <div>Hello test!</div>,
-  },
-]);
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home"
 
 function App() {
   return (
-    <>
-      <Header />
-      <RouterProvider router={router} />
+    <div className="App">
+      <Nav />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/a-propos" element={<div>A propos</div>} />
+        </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

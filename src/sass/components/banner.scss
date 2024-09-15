@@ -1,0 +1,41 @@
+.banner {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.banner img {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.banner-text {
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(0 0 0 / 50%);
+  position: absolute;
+  top: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .home-container {
+      margin: 0 5%;
+    }
+  
+    .banner {
+      font-size: 35px;
+    }
+  
+    .banner img,
+    .banner-text {
+      height: 200px;
+      border-radius: 25px;
+    }
+  }

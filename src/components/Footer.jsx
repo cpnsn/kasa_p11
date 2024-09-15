@@ -1,6 +1,9 @@
 function Footer() {
   return (
-    "Test Footer"
+    <footer>
+        <img src={"/images/logo/logo_white.svg"} alt="Logo Kasa" />
+        <p>© 2020 Kasa. All rights reserved</p>
+    </footer>
   );
 }
 
