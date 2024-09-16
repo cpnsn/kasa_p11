@@ -2,6 +2,7 @@
   position: relative;
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 .banner img {
@@ -25,17 +26,17 @@
 }
 
 @media (min-width: 1024px) {
-    .home-container {
-      margin: 0 5%;
-    }
-  
-    .banner {
-      font-size: 35px;
-    }
-  
-    .banner img,
-    .banner-text {
-      height: 200px;
-      border-radius: 25px;
-    }
+  .home-container {
+    margin: 0 5%;
   }
+
+  .banner {
+    font-size: 35px;
+  }
+
+  .banner img,
+  .banner-text {
+    height: 200px;
+    border-radius: 25px;
+  }
+}

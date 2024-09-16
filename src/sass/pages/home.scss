@@ -3,18 +3,18 @@
   font-family: "Montserrat";
 }
 
-.cards-container {
-  background-color: #f6f6f6;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  //   margin: 0 auto;
-}
-
 @media (min-width: 1024px) {
   .home-container {
     margin: 0 5%;
+  }
+
+  .cards-container {
+    background-color: #f6f6f6;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    //   margin: 0 auto;
   }
 }
