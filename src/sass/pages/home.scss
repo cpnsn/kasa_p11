@@ -18,3 +18,15 @@
     //   margin: 0 auto;
   }
 }
+
+@media (min-width: 1400px) {
+  .home-container {
+    margin: 0 10%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .home-container {
+    margin: 0 20%;
+  }
+}

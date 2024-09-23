@@ -1,0 +1,36 @@
+.about {
+  background-color: #ff6060;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-content {
+  margin-bottom: 2rem;
+}
+
+.arrow-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+  .about {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .about-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
