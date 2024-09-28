@@ -1,0 +1,34 @@
+.error-container {
+  text-align: center;
+  font-family: "Montserrat";
+  margin: 5rem 0;
+}
+
+.error-container h1 {
+  font-size: 100px;
+}
+
+.error-container p {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.error-container a {
+    color: #000;
+  }
+
+.text-color {
+  color: #ff6060;
+}
+
+@media (min-width: 1024px) {
+  .error-container h1 {
+    font-size: 210px;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  .error-container p {
+    font-size: 30px;
+  }
+}
