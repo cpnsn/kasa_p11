@@ -1,0 +1,56 @@
+.text-color {
+  color: #ff6060;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.min-content {
+  width: min-content;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.logement-cover {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.logement h1 {
+  font-weight: 400;
+}
+
+.host {
+  height: 50px;
+  border-radius: 999px;
+  margin-left: 10px;
+}
+
+.tag {
+  background-color: #ff6060;
+  width: fit-content;
+  padding: 2px 30px;
+  border-radius: 9px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.logement .toggle {
+    width: 45%;
+}
+
+@media (min-width: 1024px) {
+  .logement-cover {
+    height: 400px;
+    border-radius: 20px;
+  }
+}

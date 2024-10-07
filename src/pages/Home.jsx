@@ -16,6 +16,7 @@ function Home() {
               imgSrc={item.cover}
               imgTitle={item.title}
               title={item.title}
+              link={item.id}
             />
         ))}
       </div>
