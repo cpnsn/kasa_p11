@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import data from "../data.json";
 import Error from "./Error";
+import AboutItem from "../components/AboutItem";
 
 const pinkStar = "/images/icons/pink_star.svg";
 const greyStar = "/images/icons/grey_star.svg";
@@ -10,10 +11,14 @@ function Logement() {
   const { id } = useParams();
   const logement = data.find((logement) => logement.id === id);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  if (!logement) {
+    return <Error />;
+  }
+
   const LogementRating = parseInt(logement.rating, 10);
   const stars = [1, 2, 3, 4, 5];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   function seePrevSlide() {
     setCurrentIndex((prevIndex) =>
@@ -25,21 +30,6 @@ function Logement() {
     setCurrentIndex((prevIndex) =>
       prevIndex === logement.pictures.length - 1 ? 0 : prevIndex + 1
     );
-  }
-
-  const [isDescriptionVisible, setDescriptionVisible] = useState(false);
-  const [isEquipmentsVisible, setEquipmentsVisible] = useState(false);
-
-  const toggleDescription = () => {
-    setDescriptionVisible(!isDescriptionVisible);
-  };
-
-  const toggleEquipments = () => {
-    setEquipmentsVisible(!isEquipmentsVisible);
-  };
-
-  if (!logement) {
-    return <Error />;
   }
 
   return (
@@ -73,71 +63,45 @@ function Logement() {
       </div>
       <div className="info-container">
         <div className="">
-            <h1 className="text-color">{logement.title}</h1>
-            <p>{logement.location}</p>
-            <div className="flex">
+          <h1 className="text-color">{logement.title}</h1>
+          <p className="location">{logement.location}</p>
+          <div className="flex flex-wrap">
             {logement.tags.map((tag, index) => (
-                <p className="tag" key={index}>
+              <p className="tag" key={index}>
                 {tag}
-                </p>
+              </p>
             ))}
-            </div>
+          </div>
         </div>
 
         <div className="name-rating">
-            <div>
+          <div>
             {stars.map((star) => (
-                <img
+              <img
                 key={star}
                 src={star <= LogementRating ? pinkStar : greyStar}
                 alt={"icon"}
                 className="star"
-                />
+              />
             ))}
-            </div>
-            <div className="flex align-center">
+          </div>
+          <div className="flex align-center">
             <p className="text-color min-content">{logement.host.name}</p>
             <img
-                className="host"
-                src={logement.host.picture}
-                alt={logement.host.name}
+              className="host"
+              src={logement.host.picture}
+              alt={logement.host.name}
             ></img>
-            </div>
+          </div>
         </div>
       </div>
 
       <div className="toggles-container">
         <div className="toggle-wrapper">
-          <div className="toggle">
-            <span>Description</span>
-            <img
-              onClick={toggleDescription}
-              className={`arrow-icon ${isDescriptionVisible ? "rotate" : ""}`}
-              src={"/images/icons/arrow_down.svg"}
-              alt="icon"
-            />
-          </div>
-          {isDescriptionVisible && (
-            <div className="about-content">{logement.description}</div>
-          )}
+          <AboutItem title={"Description"} content={logement.description} />
         </div>
         <div className="toggle-wrapper">
-          <div className="toggle">
-            <span>Équipements</span>
-            <img
-              onClick={toggleEquipments}
-              className={`arrow-icon ${isEquipmentsVisible ? "rotate" : ""}`}
-              src={"/images/icons/arrow_down.svg"}
-              alt="icon"
-            />
-          </div>
-          {isEquipmentsVisible && (
-            <div className="about-content">
-              {logement.equipments.map((equipment, index) => (
-                <p key={index}>{equipment}</p>
-              ))}
-            </div>
-          )}
+          <AboutItem title={"Équipements"} content={logement.equipments} />
         </div>
       </div>
     </div>

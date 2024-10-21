@@ -17,7 +17,15 @@ function AboutItem({ title, content }) {
           alt="icon"
         />
       </div>
-      {isVisible && <div className="about-content">{content}</div>}
+      {isVisible && (
+        <div className="about-content">
+          {Array.isArray(content) ? (
+            content.map((item, index) => <p key={index}>{item}</p>)
+          ) : (
+            <p>{content}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

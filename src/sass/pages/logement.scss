@@ -14,6 +14,10 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .align-center {
   align-items: center;
 }
@@ -33,11 +37,22 @@
   border-radius: 10px;
 }
 
+.location,
+.tag,
+h1 {
+  margin: 10px 0;
+}
+
 .gallery-button {
   @extend .absolute;
-  top: 40%;
+  top: 47%;
   background-color: transparent;
   border: none;
+}
+
+.gallery-button img {
+  width: 13px;
+  cursor: pointer;
 }
 
 .prev {
@@ -49,6 +64,7 @@
 }
 
 .slides-count {
+  display: none;
   @extend .absolute;
   bottom: 5%;
   left: 50%;
@@ -102,6 +118,18 @@
     border-radius: 20px;
   }
 
+  .gallery-button img {
+    width: 42px;
+  }
+
+  .gallery-button {
+    top: 40%;
+  }
+
+  .slides-count {
+    display: block;
+  }
+
   .info-container {
     display: flex;
     justify-content: space-between;
@@ -122,11 +150,12 @@
     width: 48%;
   }
 
-  .logement .about-content {
+  .logement .about {
     width: auto;
+    padding: 1rem;
   }
 
-  .logement .toggle {
-    padding: 1rem;
+  .logement .about-content {
+    width: auto;
   }
 }
