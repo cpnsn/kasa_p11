@@ -1,7 +1,7 @@
 import data from "../about.json";
 
 import Banner from "../components/Banner";
-import AboutItem from "../components/AboutItem";
+import Collapse from "../components/Collapse";
 
 function About() {
   return (
@@ -10,10 +10,7 @@ function About() {
 
       <div>
         {data.map((item, index) => (
-          <AboutItem key={index}
-            title={item.title}
-            content={item.content}
-          />
+          <Collapse key={index} title={item.title} content={item.content} />
         ))}
       </div>
     </div>

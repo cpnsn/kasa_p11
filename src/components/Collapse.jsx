@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AboutItem({ title, content }) {
+function Collapse({ title, content }) {
   const [isVisible, setIsVisible] = useState(false);
   const toggleContent = () => {
     setIsVisible(!isVisible);
@@ -30,4 +30,4 @@ function AboutItem({ title, content }) {
   );
 }
 
-export default AboutItem;
+export default Collapse;

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import data from "../data.json";
 import Error from "./Error";
-import AboutItem from "../components/AboutItem";
+import Collapse from "../components/Collapse";
 
 const pinkStar = "/images/icons/pink_star.svg";
 const greyStar = "/images/icons/grey_star.svg";
@@ -18,7 +18,7 @@ function Logement() {
   }
 
   const LogementRating = parseInt(logement.rating, 10);
-  const stars = [1, 2, 3, 4, 5];
+  const stars = Array(5).fill(0).map((_, index) => index + 1);
 
   function seePrevSlide() {
     setCurrentIndex((prevIndex) =>
@@ -98,10 +98,10 @@ function Logement() {
 
       <div className="toggles-container">
         <div className="toggle-wrapper">
-          <AboutItem title={"Description"} content={logement.description} />
+          <Collapse title={"Description"} content={logement.description} />
         </div>
         <div className="toggle-wrapper">
-          <AboutItem title={"Équipements"} content={logement.equipments} />
+          <Collapse title={"Équipements"} content={logement.equipments} />
         </div>
       </div>
     </div>
