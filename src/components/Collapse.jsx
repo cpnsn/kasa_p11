@@ -17,15 +17,13 @@ function Collapse({ title, content }) {
           alt="icon"
         />
       </div>
-      {isVisible && (
-        <div className="about-content">
-          {Array.isArray(content) ? (
-            content.map((item, index) => <p key={index}>{item}</p>)
-          ) : (
-            <p>{content}</p>
-          )}
-        </div>
-      )}
+      <div className={`about-content ${isVisible ? "visible" : "hidden"}`}>
+        {Array.isArray(content) ? (
+          content.map((item, index) => <p key={index}>{item}</p>)
+        ) : (
+          <p>{content}</p>
+        )}
+      </div>
     </div>
   );
 }
