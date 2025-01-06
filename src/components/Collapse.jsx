@@ -9,7 +9,7 @@ function Collapse({ title, content }) {
   return (
     <div>
       <div className="about">
-        <span>{title}</span>
+        <h2>{title}</h2>
         <img
           onClick={toggleContent}
           className={`arrow-icon ${isVisible ? "rotate" : ""}`}

@@ -5,8 +5,8 @@ function Nav() {
     <nav>
       <img src={"/images/logo/logo.svg"} alt="Logo Kasa" />
       <div>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/a-propos">À propos</NavLink>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")}>Accueil</NavLink>
+        <NavLink to="/a-propos" className={({ isActive }) => (isActive ? "active-link" : "")}>À propos</NavLink>
       </div>
     </nav>
   );

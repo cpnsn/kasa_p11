@@ -10,13 +10,14 @@
   border-radius: 10px;
 }
 
-.card span {
+.card h2 {
   position: absolute;
   left: 1rem;
-  bottom: 1rem;
+  bottom: 0.5rem;
   width: 50%;
   font-weight: 700;
   color: #fff;
+  font-size: 1rem;
 }
 
 @media (min-width: 1024px) {

@@ -16,9 +16,16 @@ nav div {
 
 nav a {
   text-decoration: none;
-  margin-left: 2rem;
+  text-transform: uppercase;
+  margin-left: 1rem;
   color: #000000;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+nav .active-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
 }
 
 @media (min-width: 1024px) {
@@ -27,7 +34,9 @@ nav a {
   }
 
   nav a {
-    font-size: 16px;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    text-transform: none;
   }
 }
 

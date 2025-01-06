@@ -16,7 +16,7 @@ export default function Carousel({ logement }) {
   }
 
   return (
-    <div className="relative">
+    <header className="relative">
       {logement.pictures.map((picture, index) => (
         <img
           key={index}
@@ -42,6 +42,6 @@ export default function Carousel({ logement }) {
           </button>
         </>
       )}
-    </div>
+    </header>
   );
 }

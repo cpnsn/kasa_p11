@@ -1,11 +1,11 @@
 function Banner({ imgSrc, text }) {
   return (
-    <div className="banner">
+    <header className="banner">
       <img src={imgSrc} alt="banner" />
       <div className="banner-text">
-        <p>{text}</p>
+        <h1>{text}</h1>
       </div>
-    </div>
+    </header>
   );
 }
 

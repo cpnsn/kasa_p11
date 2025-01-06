@@ -1,11 +1,11 @@
-.home-container {
+main, header {
   margin: 0 4%;
   font-family: "Montserrat";
   margin-bottom: 3rem;
 }
 
 @media (min-width: 1024px) {
-  .home-container {
+  main, header {
     margin: 0 5% 3rem 5%;
   }
 
@@ -16,18 +16,17 @@
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
-    //   margin: 0 auto;
   }
 }
 
 @media (min-width: 1400px) {
-  .home-container {
+  main, header {
     margin: 0 10% 3rem 10%;
   }
 }
 
 @media (min-width: 1800px) {
-  .home-container {
+  main, header {
     margin: 0 20%;
   }
 }
